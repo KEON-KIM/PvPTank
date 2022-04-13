@@ -1,9 +1,9 @@
 # PvPTank
-<h1> 1. 구조 (Structure) 
+<h1> 1. 구조 (Structure)</h1>
   : SingleTone, 각 매니저는 instance화 한다.
   
   
-<h2> 1. Back End (Unity.BackEnd)
+<h2> 1. Back End (Unity.BackEnd) </h2>
   (1) ServerManager
     서버 접속과 서버의 현재 접속 상태를 위한 매니저
   (2) MatchManager
@@ -11,11 +11,11 @@
   (3) Protocol
     byte[]형식의 메세지를 위한 parameter들의 protocl 정의
 
-<h2> 2. InApplication
+<h2> 2. InApplication </h2>
   (1) GameManager
     게임의 상태를 저장하고, 핸들러를 통해 화면 전환을 위한 매니저
 
-<h2> 3. InGame
+<h2> 3. InGame </h2>
   (1) WorldManager
     인게임의 상태를 저장하고, 자신의 위치를 MatchManager를 통해 메세지를 서버로 발신 및 수신등 통신을 위한 매니저
   (2) InputManager
@@ -23,7 +23,7 @@
   (3) Player
     플레이어들의 탱크 동작과 상태 및 위치, 이벤트를 저장
 
-<h1> 2. 동작
+<h1> 2. 동작 </h1>
   (1) Login
     어플리케이션 구동 시 ServerManager와 GameManager가 동작하여 서버상태를 나타내는 서버핸들러와 게임 핸들러가 시작 된다. (ServerManager, GameManager는 한 번 실행되면 어플리케이션 종료전 까지 종료 되지 않는다.)
     Login 오브젝트 내 ID.Text, Password.Text에 입력된 정보를 토대로 ServerManager를 통해 사용자 정보를 가져오거나 오류를 표출 한다. 만약, 정상적인 사용자 정보를 가져올 경우 핸들러들의 상태를 변경하고, Match Scene으로 이동한다.
