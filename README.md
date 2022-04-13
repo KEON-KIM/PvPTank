@@ -4,6 +4,7 @@
   
   
 <h2> 1. Back End (Unity.BackEnd) </h2>
+
   (1) ServerManager
     서버 접속과 서버의 현재 접속 상태를 위한 매니저
     
@@ -34,8 +35,7 @@
     Login 오브젝트 내 ID.Text, Password.Text에 입력된 정보를 토대로 ServerManager를 통해 사용자 정보를 가져오거나 오류를 표출 한다. 만약, 정상적인 사용자 정보를 가져올 경우 핸들러들의 상태를 변경하고, Match Scene으로 이동한다.
     
   (2) Match Scene
-    Match Scene 구동 시 MatchManager가 동작하며(InGame종료 이전까지 종료 되지 않는다.) ServerManager에 의해 MatchManager에 사용자 정보가 입력 되며 initialize된다.
-    Match mode 버튼 클릭시 MatchManager는 매칭 할 수 있는 매칭 룸의 정보를 찾는다. (만약, 매칭 룸의 정보를 찾을 수 없으면 AIPlayer 샌드박스모드로 InGameRoom을 생성한다.) 매칭 성공시, GameManager와 ServerManager는 각각의 핸들러를 State.Load으로 변경하고, MatchManager는 접속된 Player User의 정보를 players Dictionary(<playerIndex, playerInfo(Message)>)에 담는다. 마지막으로, 변환 되는 핸들러로 인해 LoadScene으로 이동 되며 Match Scene이 종료된다.
+    Match Scene 구동 시 MatchManager가 동작하며(InGame종료 이전까지 종료 되지 않는다.) ServerManager에 의해 MatchManager에 사용자 정보가 입력 되며 initialize된다. Match mode 버튼 클릭시 MatchManager는 매칭 할 수 있는 매칭 룸의 정보를 찾는다. (만약, 매칭 룸의 정보를 찾을 수 없으면 AIPlayer 샌드박스모드로 InGameRoom을 생성한다.) 매칭 성공시, GameManager와 ServerManager는 각각의 핸들러를 State.Load으로 변경하고, MatchManager는 접속된 Player User의 정보를 players Dictionary(<playerIndex, playerInfo(Message)>)에 담는다. 마지막으로, 변환 되는 핸들러로 인해 LoadScene으로 이동 되며 Match Scene이 종료된다.
     
   (3) Load Scene
     WorldManager의 구동과 동시에, initialize가 시작되고, MatchManager의 players dictionary를 통해 현재 접속 되어 있는 플레이어들의 정보를 나타내는 UI object contents를 생성한다. 또한, InGame내에서 사용할 Player의 탱크 오브젝트를 생성하고 WorldManager의 players를 새롭게 생성한다 <playerIndex, Player(Object)>.
