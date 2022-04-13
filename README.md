@@ -27,9 +27,6 @@
   <h3> (2) InputManager </h3>
     서버 동작정보를 전송하기 위한 매니저로, 입력을 실시간으로 받고 입력이 없다 판단되면 WorldManager는 메세지 전송을 하지 않는다. (메세지는 받음)
     
-    
-  <h3> (3) Player </h3>
-    플레이어들의 탱크 동작과 상태 및 위치, 이벤트를 저장
 
 <h1> 2. 동작 </h1>
   <h3> (1) Login </h3>
@@ -38,7 +35,7 @@
     
     
   <h3> (2) Match Scene </h3>
-    Match Scene 구동 시 MatchManager가 동작하며(InGame종료 이전까지 종료 되지 않는다.) ServerManager에 의해 MatchManager에 사용자 정보가 입력 되며 initialize된다. Match mode 버튼 클릭시 MatchManager는 매칭 할 수 있는 매칭 룸의 정보를 찾는다. (만약, 매칭 룸의 정보를 찾을 수 없으면 AIPlayer 샌드박스모드로 InGameRoom을 생성한다.) 매칭 성공시, GameManager와 ServerManager는 각각의 핸들러를 State.Load으로 변경하고, MatchManager는 접속된 Player User의 정보를 players Dictionary(<playerIndex, playerInfo(Message)>)에 담는다. 마지막으로, 변환 되는 핸들러로 인해 LoadScene으로 이동 되며 Match Scene이 종료된다.
+  <p>Match Scene 구동 시 MatchManager가 동작하며(InGame종료 이전까지 종료 되지 않는다.) ServerManager에 의해 MatchManager에 사용자 정보가 입력 되며 initialize된다. Match mode 버튼 클릭시 MatchManager는 매칭 할 수 있는 매칭 룸의 정보를 찾는다. (만약, 매칭 룸의 정보를 찾을 수 없으면 AIPlayer 샌드박스모드로 InGameRoom을 생성한다.) 매칭 성공시, GameManager와 ServerManager는 각각의 핸들러를 State.Load으로 변경하고, MatchManager는 접속된 Player User의 정보를 players Dictionary(<playerIndex, playerInfo(Message)>)에 담는다. 마지막으로, 변환 되는 핸들러로 인해 LoadScene으로 이동 되며 Match Scene이 종료된다. </p>
     
     
   <h3> (3) Load Scene </h3>
