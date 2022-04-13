@@ -44,8 +44,7 @@
   
   
   <h3> (4) InGame </h3>
-    WorldManager는 inputManager에 의해 메세지 전송을 한다. 만약, Input(Button, JoyStick)이 있다면 SendToMessage()를 통해 현재 자신의 정보를 상태에 따라 Message type을 변경하여 서버로 보낸다. 서버와 연결된 클라이언트의(host가 아닌) WorldManager는 Message를 모두 비동기화식으로 수신하며 수신된 Message들을 변환 작업 후 자신을 제외한 각 player 오브젝트에 적용한다. (만약, 현 플레이어가 host라면 수신 된 데이터를 LocalQueue에 저장하고 변경 되는 모든 이동 정보를 각 클라이언트에게 발신함.) 게임이 종료 되면, ServerManager를 통해 유저 기록 정보가 최신화 되며, 게임과 서버 핸들러가 Match 상태로 변경되고, MatchManager가 초기화 된다. 그리고 WorldManager는 종료 된다.
-  
-  
-@Reference BACKEND SDK Tutorial <https://developer.thebackend.io/unity3d/realtime/matchMake/tutorial/>
+    WorldManager는 inputManager에 의해 메세지 전송을 한다. 만약, Input(Button, JoyStick)이 있다면 SendToMessage()를 통해 현재 자신의 정보를 상태에 따라 Message type을 변경하여 서버로 보낸다. 서버와 연결된 클라이언트의(host가 아닌) WorldManager는 Message를 모두 비동기화식으로 수신하며 수신된 Message들을 변환 작업 후 자신을 제외한 각 player 오브젝트에 적용한다. (만약, 현 플레이어가 host라면 수신 된 데이터를 LocalQueue에 저장하고 변경 되는 모든 이동 정보를 각 클라이언트에게 발신함.) 게임이 종료 되면, ServerManager를 통해 유저 기록 정보가 최신화 되며, 게임과 서버 핸들러가 Match 상태로 변경되고, MatchManager가 초기화 된다. 그리고 WorldManager는 종료 된다.  
+    
+@Reference BACKEND SDK Tutorial <https://developer.thebackend.io/unity3d/realtime/matchMake/tutorial/>  
 @Reference UNITY Tutorial <https://learn.unity.com/project/tanks-tutorial>
