@@ -146,7 +146,7 @@ Loading Scene에서 InGame Scene으로 전환되면서 실행되고, 인게임�
 
 ## 2. 동작
 
-![](C:\Users\srihw\OneDrive\바탕 화면\PvPTank.png)
+![PvPTank](https://user-images.githubusercontent.com/37167860/163588293-42e6ebea-9307-4d20-807b-16b6f895b0d1.png)
 
 ### 1) Login Scene
 
