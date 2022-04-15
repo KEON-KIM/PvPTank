@@ -118,8 +118,6 @@ Loading Scene에서 InGame Scene으로 전환되면서 실행되고, 인게임�
 
 ## 2. 동작
 
-![]()
-
 1)Login
 
 2)Lobby(MatchRoom)
