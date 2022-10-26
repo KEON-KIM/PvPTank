@@ -174,7 +174,7 @@ Loading Scene에서 InGame Scene으로 전환되면서 실행되고, 인게임�
 
 - InGame Server와의 정상 접속 처리 후, 서버내에 접속 된 유저들의 정보를 **SessionID**을 통해 유저 카드를 생성하고 UIManager에 통해 UI로 표시한다.
 
-- Scene이 유지된 채, **InGame Scene**의 설정이 **완료될 때까지** **기다린다**.
+- Scene이 유지된 채, **InGame Scene**의 설정이 **완료될 때까지** **기다린다**. 설정완료가 끝이나면, HOST는 GameStart Message를 송신한다.
 
   
 
